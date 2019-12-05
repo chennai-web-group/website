@@ -9,7 +9,7 @@ export default function Events() {
   let [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/chennai-web-group/talks/master/talks.json')
+    fetch('https://cdn.jsdelivr.net/gh/chennai-web-group/talks/talks.json')
     .then((response) => {
       response.json()
       .then((json) => {
