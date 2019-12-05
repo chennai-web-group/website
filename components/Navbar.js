@@ -1,14 +1,14 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
 const links = [
   { href: '/talks', label: 'Talks' },
   { href: '/about', label: 'About' },
-  { href: '/team', label: 'Team' },
+  { href: '/team', label: 'Team' }
 ].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
+  link.key = `nav-link-${link.href}-${link.label}`;
+  return link;
+});
 
 const Nav = () => (
   <nav className="text-center">
@@ -18,6 +18,7 @@ const Nav = () => (
           <a>Home</a>
         </Link>
       </li>
+
       <span className="flex">
         {links.map(({ key, href, label }) => (
           <li key={key} className="px-4 hover:underline">
@@ -29,6 +30,6 @@ const Nav = () => (
       </span>
     </ul>
   </nav>
-)
+);
 
-export default Nav
+export default Nav;

@@ -1,26 +1,21 @@
-import React from 'react'
-import Talk from "./Talk";
+import React from 'react';
+import Talk from './Talk';
 
 export default function Event(props) {
-
   let { event } = props;
-  let { event_name, date, talks } = event || {};
+  let { event_name: eventName, date, talks } = event || {};
 
   return (
     <div>
       <div className="border-t border-b p-4 flex justify-between text-black event-header">
-        <span>
-          {event_name}
-        </span>
-        <span className="text-gray-600">
-          {date}
-        </span>
+        <span>{eventName}</span>
+        <span className="text-gray-600">{date}</span>
       </div>
 
       <div>
-        {
-          talks.map((talk) => <Talk talk={talk} />)
-        }
+        {talks.map(talk => (
+          <Talk key={talk.title} talk={talk} />
+        ))}
       </div>
 
       <style jsx>{`
@@ -29,5 +24,5 @@ export default function Event(props) {
         }
       `}</style>
     </div>
-  )
+  );
 }

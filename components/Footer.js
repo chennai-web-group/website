@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
 export default function Footer() {
   return (
     <div>
       <footer className="fixed bottom-0 w-full p-1 text-white text-center">
         &copy; 2019 Chennai Web Group
-      </footer>  
-      
+      </footer>
+
       <style jsx>{`
         footer {
           background: #5ba150;
@@ -14,5 +14,5 @@ export default function Footer() {
         }
       `}</style>
     </div>
-  )
+  );
 }
