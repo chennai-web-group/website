@@ -15,7 +15,7 @@ const links = [
 
 const Home = () => (
   <div>
-    <CommonHead />
+    <CommonHead title="Home | Chennai Web Group" />
     <Nav />
 
     <div className="mt-24 text-center">
