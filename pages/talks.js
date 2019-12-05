@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../components/Nav'
+import Nav from '../components/Navbar'
 import Footer from '../components/Footer'
 import CommonHead from '../components/CommonHead';
 import Events from '../components/Events';
