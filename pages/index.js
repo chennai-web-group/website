@@ -1,85 +1,55 @@
 import React from 'react'
-import Head from 'next/head'
-import Nav from '../components/nav'
+import Nav from '../components/Nav'
+import CommonHead from '../components/CommonHead'
+import Footer from '../components/Footer'
+
+const links = [
+  { href: 'https://www.meetup.com/Chennai-Web-Meetup', label: 'Meetup', icon: 'meetup.png' },
+  { href: 'https://github.com/chennai-web-group/', label: 'GitHub', icon: 'github.png' },
+  { href: 'http://twitter.com/ChennaiWebGroup', label: 'Twitter', icon: 'twitter.png' },
+  { href: 'https://www.youtube.com/channel/UCjMbw7Yt8nockWPcra1dfUQ', label: 'YouTube', icon: 'youtube.png' },
+].map(link => {
+  link.key = link.label;
+  return link;
+})
 
 const Home = () => (
   <div>
-    <Head>
-      <title>Home</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-
+    <CommonHead />
     <Nav />
 
-    <div className="hero">
-      <h1 className="title">Welcome to Next.js!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
+    <div className="mt-24 text-center">
+      <header className="text-6xl">Chennai Web Group</header>
+      <div className="text-xl">
+        A place where Chennai based (but not limited to) web developers hang out to accomplish things
+      </div>
+      <div className="mt-6">
+        {
+          links.map((link) => (
+            <a href={link.href} target="_blank">
+              <img src={`./assets/images/${link.icon}`} alt={link.label}  className="inline-block mx-4" />
+            </a>
+          ))
+        }
 
-      <div className="row">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Learn more about Next.js in the documentation.</p>
-        </a>
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Next.js Learn &rarr;</h3>
-          <p>Learn about Next.js by following an interactive tutorial!</p>
-        </a>
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Find other example boilerplates on the Next.js GitHub.</p>
-        </a>
       </div>
     </div>
 
+    <Footer />
+
     <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
+      * {
+        color: #5ba150;
+        font-family: 'Righteous', cursive;
       }
-      .title {
+    
+      body {
+        background: #fafafa;
         margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
       }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
+    
+      img {
+        width: 60px;
       }
     `}</style>
   </div>
