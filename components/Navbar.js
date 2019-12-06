@@ -2,7 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 
 const links = [
-  { href: '/talks', label: 'Talks' },
+  {
+    href: 'https://forms.gle/2JQ9MuXLagXb61Q3A',
+    label: 'Submit a Proposal',
+    external: true
+  },
+  { href: '/talks', label: 'Previous Talks' },
   { href: '/about', label: 'About' },
   { href: '/team', label: 'Team' }
 ].map(link => {
@@ -20,11 +25,17 @@ const Nav = () => (
       </li>
 
       <span className="flex">
-        {links.map(({ key, href, label }) => (
+        {links.map(({ key, href, label, external }) => (
           <li key={key} className="px-4 hover:underline">
-            <Link href={href}>
-              <a>{label}</a>
-            </Link>
+            {external ? (
+              <a href={href} target="_blank">
+                {label}
+              </a>
+            ) : (
+              <Link href={href}>
+                <a>{label}</a>
+              </Link>
+            )}
           </li>
         ))}
       </span>
