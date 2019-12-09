@@ -1,7 +1,5 @@
 import React from 'react';
-import Nav from '../components/Navbar';
-import CommonHead from '../components/CommonHead';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
 
 const links = [
   {
@@ -31,34 +29,31 @@ const links = [
 
 const Home = () => (
   <div>
-    <CommonHead title="Home | Chennai Web Group" />
-    <Nav />
-
-    <div className="mt-24 text-center">
-      <header className="text-6xl">Chennai Web Group</header>
-      <div className="text-xl">
-        A place where Chennai based (but not limited to) web developers hang out
-        to accomplish things
+    <Layout title="Home | Chennai Web Group">
+      <div className="mt-24 text-center">
+        <header className="text-6xl">Chennai Web Group</header>
+        <div className="text-xl">
+          A place where Chennai based (but not limited to) web developers hang
+          out to accomplish things
+        </div>
+        <div className="mt-6">
+          {links.map(link => (
+            <a
+              href={link.href}
+              key={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={`./assets/images/${link.icon}`}
+                alt={link.label}
+                className="inline-block mx-4"
+              />
+            </a>
+          ))}
+        </div>
       </div>
-      <div className="mt-6">
-        {links.map(link => (
-          <a
-            href={link.href}
-            key={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={`./assets/images/${link.icon}`}
-              alt={link.label}
-              className="inline-block mx-4"
-            />
-          </a>
-        ))}
-      </div>
-    </div>
-
-    <Footer />
+    </Layout>
 
     <style jsx>{`
       * {

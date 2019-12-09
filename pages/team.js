@@ -1,19 +1,22 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import Events from '../components/Events';
 
 const Talks = () => (
   <div>
-    <Layout title="Events and Talks | Chennai Web Group">
-      <h1 className="text-xl text-center mt-8">Events and Talks</h1>
+    <Layout title="Team | Chennai Web Group">
+      <h1 className="text-xl text-center mt-8 ">The Team</h1>
 
-      <Events />
+      <p className="text-center mt-8 text-black"></p>
     </Layout>
 
     <style jsx>{`
       * {
         color: #5ba150;
         font-family: 'Righteous', cursive;
+      }
+
+      p {
+        color: black;
       }
 
       body {

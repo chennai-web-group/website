@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function ResourceLink(props) {
-  let { text, link } = props;
+  let { text, link, className } = props;
 
   if (link) {
     return (
@@ -9,7 +9,7 @@ export default function ResourceLink(props) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:underline cursor-pointer"
+        className={`hover:underline cursor-pointer ${className}`}
       >
         {text}
       </a>
