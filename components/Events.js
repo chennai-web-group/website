@@ -8,7 +8,7 @@ export default function Events() {
 
   useEffect(() => {
     fetch(
-      'https://cdn.jsdelivr.net/gh/chennai-web-group/talks/talks.json'
+      'https://cdn.jsdelivr.net/gh/chennai-web-group/talks@0.0.1/talks.json'
     ).then(response => {
       response.json().then(json => {
         setEvents(json.events);
