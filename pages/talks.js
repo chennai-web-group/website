@@ -9,18 +9,6 @@ const Talks = () => (
 
       <Events />
     </Layout>
-
-    <style jsx>{`
-      * {
-        color: #5ba150;
-        font-family: 'Righteous', cursive;
-      }
-
-      body {
-        background: #fafafa;
-        margin: 0;
-      }
-    `}</style>
   </div>
 );
 

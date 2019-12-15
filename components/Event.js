@@ -7,7 +7,7 @@ export default function Event(props) {
 
   return (
     <div>
-      <div className="border-t border-b p-4 flex justify-between text-black event-header">
+      <div className="border-t border-b p-4 flex justify-between text-gray-700 event-header">
         <span>{eventName}</span>
         <span className="text-gray-600">{date}</span>
       </div>

@@ -9,8 +9,8 @@ const links = [
     external: true
   },
   { href: '/talks', label: 'Previous Talks' },
-  { href: '/about', label: 'About' },
-  { href: '/team', label: 'Team' }
+  { href: '/about', label: 'About' }
+  // { href: '/team', label: 'Team' }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`;
   return link;

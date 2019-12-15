@@ -8,22 +8,6 @@ const Talks = () => (
 
       <p className="text-center mt-8 text-black"></p>
     </Layout>
-
-    <style jsx>{`
-      * {
-        color: #5ba150;
-        font-family: 'Righteous', cursive;
-      }
-
-      p {
-        color: black;
-      }
-
-      body {
-        background: #fafafa;
-        margin: 0;
-      }
-    `}</style>
   </div>
 );
 
