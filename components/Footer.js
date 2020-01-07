@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div>
       <footer className="fixed bottom-0 w-full p-1 text-white text-center">
-        &copy; 2019 Chennai Web Group
+        &copy; 2020 Chennai Web Group
       </footer>
 
       <style jsx>{`
