@@ -1,4 +1,7 @@
 import React from 'react';
+import variables from '../styles/variables';
+
+const { primaryColor, fontColor } = variables;
 
 export default function Footer() {
   return (
@@ -9,7 +12,7 @@ export default function Footer() {
 
       <style jsx>{`
         footer {
-          background: #5ba150;
+          background: ${primaryColor};
           color: white;
         }
       `}</style>

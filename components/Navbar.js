@@ -21,10 +21,17 @@ const Nav = () => {
 
   return (
     <nav className="text-center">
-      <ul className="flex justify-between p-4">
+      <ul className="flex justify-between p-4 items-center">
         <li>
           <Link href="/">
-            <a>Home</a>
+            <a>
+              <img
+                src='./logo.png'
+                alt="CWG logo"
+                className="inline-block mx-4"
+                style={{ height: '50px' }}
+              />
+            </a>
           </Link>
         </li>
 

@@ -1,3 +1,5 @@
 export default {
-  primaryColor: '#5ba150'
+  primaryColor: '#CD1D5C',
+  fontColor: '#000',
+  tableHeaderBg: '#fff'
 };
