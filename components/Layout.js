@@ -7,18 +7,18 @@ import variables from '../styles/variables';
 const { primaryColor, fontColor } = variables;
 
 export default function ResourceLink(props) {
-    let { title, children } = props;
+  let { title, children } = props;
 
-    return (
-        <>
-            <CommonHead title={title} />
-            <Nav />
+  return (
+    <>
+      <CommonHead title={title} />
+      <Nav />
 
-            <div className="mb-10">{children}</div>
+      <div className="mb-10">{children}</div>
 
-            <Footer />
+      <Footer />
 
-            <style jsx global>{`
+      <style jsx global>{`
         body {
           color: ${fontColor};
           font-family: 'Work Sans', sans-serif;
@@ -30,6 +30,6 @@ export default function ResourceLink(props) {
           color: ${primaryColor};
         }
       `}</style>
-        </>
-    );
+    </>
+  );
 }

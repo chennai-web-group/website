@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import fetch from 'isomorphic-unfetch';
 import Event from './Event';
+import state from '../state';
 
 export default function Events() {
   let [loading, setLoading] = useState(true);
@@ -8,7 +9,7 @@ export default function Events() {
 
   useEffect(() => {
     fetch(
-      'https://cdn.jsdelivr.net/gh/chennai-web-group/talks@0.0.1/talks.json'
+      `https://cdn.jsdelivr.net/gh/chennai-web-group/talks@${state.eventsApiVersion}/talks.json`
     ).then(response => {
       response.json().then(json => {
         setEvents(json.events);
@@ -22,8 +23,8 @@ export default function Events() {
       {loading ? (
         <div className="text-center"> Fetching events... </div>
       ) : (
-        <EventList events={events} />
-      )}
+          <EventList events={events} />
+        )}
     </div>
   );
 }
