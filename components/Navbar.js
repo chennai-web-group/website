@@ -5,7 +5,7 @@ import ExtLink from '../assets/icons/external-link.svg';
 
 const links = [
   {
-    href: 'https://forms.gle/2JQ9MuXLagXb61Q3A',
+    href: 'http://bit.ly/cwg-cfp',
     label: 'Submit a Proposal',
     external: true
   },
