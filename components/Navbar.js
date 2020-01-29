@@ -30,7 +30,7 @@ const Nav = () => {
                 src="./logo.png"
                 alt="CWG logo"
                 className="inline-block mx-4"
-                style={{ height: '50px' }}
+                style={{ height: '40px' }}
               />
             </a>
           </Link>
