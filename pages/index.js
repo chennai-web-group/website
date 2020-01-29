@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import state from '../state';
+// import YoutubeIcon from '../assets/icons/youtube.svg';
+// import TwitterIcon from '../assets/icons/twitter.svg';
+// import MeetupIcon from '../assets/icons/meetup.svg';
+// import GithubIcon from '../assets/icons/github.svg';
 
 const links = [
   {
