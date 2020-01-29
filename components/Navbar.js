@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import MenuIcon from '../assets/icons/menu.svg';
+import ExtLink from '../assets/icons/external-link.svg';
 
 const links = [
   {
@@ -26,7 +27,7 @@ const Nav = () => {
           <Link href="/">
             <a>
               <img
-                src='./logo.png'
+                src="./logo.png"
                 alt="CWG logo"
                 className="inline-block mx-4"
                 style={{ height: '50px' }}
@@ -70,7 +71,8 @@ let GenerateLink = ({ link }) => {
     <>
       {external ? (
         <a href={href} target="_blank" rel="noopener noreferrer">
-          {label}
+          {label}{' '}
+          <ExtLink className="h-4 align-text-top cursor-pointer inline" />
         </a>
       ) : (
         <Link href={href}>

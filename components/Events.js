@@ -23,8 +23,8 @@ export default function Events() {
       {loading ? (
         <div className="text-center"> Fetching events... </div>
       ) : (
-          <EventList events={events} />
-        )}
+        <EventList events={events} />
+      )}
     </div>
   );
 }

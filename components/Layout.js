@@ -14,7 +14,7 @@ export default function ResourceLink(props) {
       <CommonHead title={title} />
       <Nav />
 
-      <div className="mb-10">{children}</div>
+      <div className="mb-20">{children}</div>
 
       <Footer />
 
