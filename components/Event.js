@@ -6,7 +6,7 @@ const { tableHeaderBg = '' } = variables;
 
 export default function Event(props) {
   let { event } = props;
-  let { event_name: eventName, date, talks } = event || {};
+  let { event_name: eventName, date, talks, playlist } = event || {};
 
   return (
     <div>
@@ -16,9 +16,12 @@ export default function Event(props) {
       </div>
 
       <div>
-        {talks.map(talk => (
-          <Talk key={talk.title} talk={talk} />
-        ))}
+        {
+          playlist === 'coming soon'
+            ? <p className="text-center"> Videos and Slides are coming soon... Stay tuned!</p>
+            : <Talks talks={talks} />
+        }
+
       </div>
 
       <style jsx>{`
@@ -28,4 +31,11 @@ export default function Event(props) {
       `}</style>
     </div>
   );
+}
+
+function Talks(props = {}) {
+  let { talks } = props;
+  return talks.map(talk => (
+    <Talk key={talk.title} talk={talk} />
+  ));
 }

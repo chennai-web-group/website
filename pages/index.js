@@ -69,7 +69,7 @@ const Home = () => {
       `https://cdn.jsdelivr.net/gh/chennai-web-group/talks@${state.eventsApiVersion}/talks.json`
     ).then(response => {
       response.json().then(json => {
-        setEvent(json.upcoming);
+        setEvent(json.upcoming || {});
       });
     });
   }, []); // To run useEffect only once!
