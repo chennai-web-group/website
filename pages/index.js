@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
+import EventBanner from '../components/EventBanner';
 import state from '../state';
 // import YoutubeIcon from '../assets/icons/youtube.svg';
 // import TwitterIcon from '../assets/icons/twitter.svg';
@@ -33,47 +34,6 @@ const links = [
 });
 
 const Home = () => {
-  let [upcomingEvent, setEvent] = useState({});
-  let { event_name: eventName, date, venue = 'Virtual' } = upcomingEvent;
-
-  let meetupTitle = (
-    <a
-      href="https://www.meetup.com/Chennai-Web-Meetup/events/268184240/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {eventName}
-    </a>
-  );
-  let meetupMeta = (
-    <span>
-      {date} &bull; {venue}
-    </span>
-  );
-  let meetupConfLink = (
-    <span>
-      (
-      <a
-        href="https://join.freeconferencecall.com/karthickharish95"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Join Here
-      </a>
-      )
-    </span>
-  );
-
-  useEffect(() => {
-    fetch(
-      `https://cdn.jsdelivr.net/gh/chennai-web-group/talks@${state.eventsApiVersion}/talks.json`
-    ).then(response => {
-      response.json().then(json => {
-        setEvent(json.upcoming || {});
-      });
-    });
-  }, []); // To run useEffect only once!
-
   return (
     <div>
       <Layout title="Home | Chennai Web Group">
@@ -86,21 +46,7 @@ const Home = () => {
             out to accomplish things
           </div>
 
-          {eventName ? (
-            <div className="my-10 mb-12">
-              <div className="rounded-sm p-4 shadow hidden sm:inline-block up-next">
-                <span className="font-bold mb-2"> Up Next: </span> {meetupTitle}
-                &bull; {meetupMeta} {meetupConfLink}
-              </div>
-
-              <div className="text-center rounded-sm p-4 shadow w-5/6 sm:w-auto inline-block sm:hidden up-next">
-                <h3 className="font-bold mb-2"> Up Next </h3>
-                <div>{meetupTitle}</div>
-                <div>{meetupMeta} </div>
-                <div> {meetupConfLink} </div>
-              </div>
-            </div>
-          ) : null}
+          <EventBanner />
 
           <div className="mt-6">
             {links.map(link => (
