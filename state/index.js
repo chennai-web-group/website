@@ -1,3 +1,3 @@
 export default {
-  eventsApiVersion: '0.0.4'
+  eventsApiVersion: '0.0.5'
 };
