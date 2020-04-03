@@ -1,6 +1,6 @@
 import talks from './_talks.json';
 
 export default {
-  eventsApiVersion: '0.0.5',
+  eventsApiVersion: '0.0.6',
   mockTalksList: talks
 };
