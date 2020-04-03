@@ -4,6 +4,7 @@ import { getTalksList } from '../utils/network';
 
 export default function EventBanner() {
   let [eventList, setEvent] = useState({});
+  let [loading, setLoading] = useState(true);
   let { upcoming = {}, events = [] } = eventList;
   let { event_name: hasUpcomingEvent } = upcoming;
   let [latestEvent = {}] = events;
@@ -71,8 +72,15 @@ export default function EventBanner() {
   useEffect(() => {
     getTalksList().then((json) => {
       setEvent(json || {});
+      setLoading(false);
+    }).catch(() => {
+      setLoading(false);
     });
   }, []); // To run useEffect only once!
+
+  if (loading) {
+    return null;
+  }
 
   return (
     <div>
