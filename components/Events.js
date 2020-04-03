@@ -1,20 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import fetch from 'isomorphic-unfetch';
 import Event from './Event';
-import state from '../state';
+import { getTalksList } from '../utils/network';
 
 export default function Events() {
   let [loading, setLoading] = useState(true);
   let [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://cdn.jsdelivr.net/gh/chennai-web-group/talks@${state.eventsApiVersion}/talks.json`
-    ).then(response => {
-      response.json().then(json => {
-        setEvents(json.events);
-        setLoading(false);
-      });
+    getTalksList().then((json) => {
+      setEvents(json.events);
+      setLoading(false);
     });
   }, []); // To run useEffect only once!
 
@@ -23,8 +18,8 @@ export default function Events() {
       {loading ? (
         <div className="text-center"> Fetching events... </div>
       ) : (
-        <EventList events={events} />
-      )}
+          <EventList events={events} />
+        )}
     </div>
   );
 }

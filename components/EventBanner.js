@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import state from '../state';
 import Link from 'next/link';
+import { getTalksList } from '../utils/network';
 
 export default function EventBanner() {
   let [eventList, setEvent] = useState({});
@@ -12,13 +12,14 @@ export default function EventBanner() {
   let {
     event_name: eventName,
     date,
-    playlist = '',
-    venue = 'Virtual'
+    // playlist = '',
+    venue = 'Virtual',
+    meetup_link: meetupLink = ''
   } = eventToBeDisplayed;
 
   let meetupTitle = (
     <a
-      href="https://www.meetup.com/Chennai-Web-Meetup/events/268184240/"
+      href={meetupLink}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -54,13 +55,22 @@ export default function EventBanner() {
     </>
   );
 
+  let cfpDetails = (
+    <>
+      Interested to talk in this event?{' '}
+      <a
+        href="http://bit.ly/cwg-cfp"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Submit a Talk 💪
+      </a>
+    </>
+  );
+
   useEffect(() => {
-    fetch(
-      `https://cdn.jsdelivr.net/gh/chennai-web-group/talks@${state.eventsApiVersion}/talks.json`
-    ).then(response => {
-      response.json().then(json => {
-        setEvent(json || {});
-      });
+    getTalksList().then((json) => {
+      setEvent(json || {});
     });
   }, []); // To run useEffect only once!
 
@@ -75,11 +85,14 @@ export default function EventBanner() {
           <span className="font-bold mb-2">{title}</span>
           {meetupTitle}
           &nbsp; &bull; {meetupMeta} {meetupConfLink}
-          {!hasUpcomingEvent ? (
-            <div>
-              <hr className="border-t my-3 mx-48" /> {lastEventDetails}
-            </div>
-          ) : null}
+          {hasUpcomingEvent ? (
+            (<div>
+              <hr className="border-t my-3 mx-48" />
+              {cfpDetails}
+            </div>)
+          ) : (<div>
+            <hr className="border-t my-3 mx-48" /> {lastEventDetails}
+          </div>)}
         </div>
 
         <div className="text-center rounded-sm p-4 shadow w-5/6 sm:w-auto inline-block sm:hidden up-next">
@@ -87,11 +100,14 @@ export default function EventBanner() {
           <div>{meetupTitle}</div>
           <div>{meetupMeta} </div>
           <div> {meetupConfLink} </div>
-          {!hasUpcomingEvent ? (
+          {hasUpcomingEvent ? (
             <div>
-              <hr className="border-t my-3" /> {lastEventDetails}
+              <hr className="border-t my-3" />
+              {cfpDetails}
             </div>
-          ) : null}
+          ) : <div>
+              <hr className="border-t my-3" /> {lastEventDetails}
+            </div>}
         </div>
       </div>
 
