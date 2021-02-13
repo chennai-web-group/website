@@ -1,0 +1,169 @@
+{
+  "events": [
+    {
+      "event_name": "Monthly meetup - Feb 2021",
+      "date": "February 13th 2021",
+      "meetup_link": "https://www.meetup.com/Chennai-Web-Meetup/events/275617243/",
+      "playlist": "",
+      "talks": [
+        {
+          "title": "Web Component + JSX + ❤️ = Stencil",
+          "speaker": "Gokul Kathirvel",
+          "speaker_profile": "https://twitter.com/_gokatz",
+          "slides": "https://slides.com/gokatz/web-components-stenciljs",
+          "video": "",
+          "code": ""
+        },
+        {
+          "title": "A glimpse of Web Vitals",
+          "speaker": "Harish",
+          "speaker_profile": "https://twitter.com/Dev_Harish95",
+          "slides": "",
+          "video": "",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "event_name": "Monthly meetup - May 2020 #StayHome #StaySafe",
+      "date": "May 23rd 2020",
+      "meetup_link": "https://www.meetup.com/Chennai-Web-Meetup/events/270360985/",
+      "playlist": "https://www.youtube.com/playlist?list=PLDssdMsd2WNf2JcRiQXE4iT0Qd8PZd9cI",
+      "talks": [
+        {
+          "title": "React with JS to React with ReasonML",
+          "speaker": "Sreedhar Reddy A C",
+          "speaker_profile": "",
+          "slides": "",
+          "video": "https://www.youtube.com/watch?v=ORch9MF1VbE",
+          "code": ""
+        },
+        {
+          "title": "Rapid Development using Headless CMS (Strapi + React)",
+          "speaker": "Abhinav Srivastava",
+          "speaker_profile": "",
+          "slides": "",
+          "video": "https://www.youtube.com/watch?v=_i3Y9OM4_Qw",
+          "code": ""
+        },
+        {
+          "title": "Web Application Testing Tool",
+          "speaker": "Santhosh",
+          "speaker_profile": "",
+          "slides": "",
+          "video": "https://www.youtube.com/watch?v=MfTlj3V61pg",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "event_name": "Monthly meetup - April 2020 #StayHome #StaySafe",
+      "date": "April 11th 2020",
+      "meetup_link": "https://www.meetup.com/Chennai-Web-Meetup/events/269710168/",
+      "playlist": "https://www.youtube.com/playlist?list=PLDssdMsd2WNeANm_aKzoKSI2L8oxq4bQs",
+      "talks": [
+        {
+          "title": "Introduction to web components",
+          "speaker": "Harish",
+          "speaker_profile": "https://twitter.com/Dev_Harish95",
+          "slides": "https://www.slideshare.net/HarishKarthick3/introduction-to-webcomponents-232015458",
+          "video": "https://www.youtube.com/watch?v=5Iq9WxflsJg&list=PLDssdMsd2WNeANm_aKzoKSI2L8oxq4bQs&index=2&t=0s",
+          "code": "https://github.com/Hahkarthick/webcomponents"
+        },
+        {
+          "title": "Hacking terminologies",
+          "speaker": "Santhosh",
+          "speaker_profile": "",
+          "slides": "https://www.slideshare.net/santhoshsri2002/hacking-terminology-232023346",
+          "video": "https://www.youtube.com/watch?v=Vp6FtvWlvz0&list=PLDssdMsd2WNeANm_aKzoKSI2L8oxq4bQs&index=3&t=0s",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "event_name": "Monthly meetup - February 2020",
+      "date": "February 9th 2020",
+      "meetup_link": "https://www.meetup.com/Chennai-Web-Meetup/events/268184240/",
+      "playlist": "https://www.youtube.com/watch?v=diYK8Isp38A&list=PLDssdMsd2WNcqjUUy7sB8ao3sl8yt2apq",
+      "talks": [
+        {
+          "title": "Get started with Progressive Web Apps",
+          "speaker": "Harish",
+          "speaker_profile": "https://twitter.com/Dev_Harish95",
+          "slides": "",
+          "video": "https://www.youtube.com/watch?v=diYK8Isp38A&list=PLDssdMsd2WNcqjUUy7sB8ao3sl8yt2apq",
+          "code": ""
+        },
+        {
+          "title": "Moving beyond Databases: A Hands-on Introduction to Blockchain",
+          "speaker": "Abhinav",
+          "speaker_profile": "https://twitter.com/Abhinavmir",
+          "slides": "",
+          "video": "https://www.youtube.com/watch?v=pEKKo3IJv9s&list=PLDssdMsd2WNcqjUUy7sB8ao3sl8yt2apq&index=2",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "event_name": "Monthly meetup - November 2019",
+      "date": "November 10th 2019",
+      "playlist": "https://www.youtube.com/watch?v=68D04JL2eA4&list=PLDssdMsd2WNcVKJ_fV579fBA1ArVvK3Fq",
+      "talks": [
+        {
+          "title": "A brief intro to SPA routing and routers",
+          "speaker": "Gokul Kathirvel",
+          "speaker_profile": "https://twitter.com/_gokatz",
+          "slides": "https://slides.com/gokatz/a-gentle-into-to-spa-router",
+          "video": "https://www.youtube.com/watch?v=9E6SY1jf3D4",
+          "code": "https://github.com/gokatz/spa-router-demo"
+        },
+        {
+          "title": "An introduction to AngularJS",
+          "speaker": "Logesh",
+          "speaker_profile": "",
+          "slides": "",
+          "video": "https://www.youtube.com/watch?v=-6IqUEmnD-8",
+          "code": ""
+        },
+        {
+          "title": "Get to know about JSON Web Tokens",
+          "speaker": "Harish",
+          "speaker_profile": "",
+          "slides": "",
+          "video": "https://www.youtube.com/watch?v=68D04JL2eA4",
+          "code": ""
+        }
+      ]
+    },
+    {
+      "event_name": "Monthly meetup - September 2019",
+      "date": "Spetember 22nd 2019",
+      "talks": [
+        {
+          "title": "Web application security",
+          "speaker": "Santhosh",
+          "speaker_profile": "",
+          "slides": "",
+          "video": "",
+          "code": ""
+        },
+        {
+          "title": "Getting started with 'React js'",
+          "speaker": "Nikhil kumaran",
+          "speaker_profile": "",
+          "slides": "",
+          "video": "",
+          "code": ""
+        },
+        {
+          "title": "Modern app with 'Ember Octane'",
+          "speaker": "Gokul Kathirvel",
+          "speaker_profile": "",
+          "slides": "https://slides.com/gokatz/ember-octane-demo",
+          "video": "",
+          "code": "https://github.com/gokatz/chennai-web-octane-demo"
+        }
+      ]
+    }
+  ]
+}

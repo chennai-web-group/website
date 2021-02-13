@@ -8,11 +8,9 @@ export async function makeRequest(url) {
 }
 
 export async function getTalksList() {
-  if (process.env.NODE_ENV === 'development') {
-    return state.mockTalksList;
-  }
 
-  let talksUrl = `https://cdn.jsdelivr.net/gh/chennai-web-group/talks@${state.eventsApiVersion}/talks.json`;
+  // let talksUrl = `https://cdn.jsdelivr.net/gh/chennai-web-group/talks@${state.eventsApiVersion}/talks.json`;
+  let talksUrl = '/assets/data/talks.json';
   let json = await makeRequest(talksUrl);
   return json;
 }
